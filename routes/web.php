@@ -10,6 +10,7 @@ use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\FollowerController;
 use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,13 +27,17 @@ use App\Http\Controllers\Auth\RegisterController;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('principal');
-});
+// Route::get('/', function () {
+//     return view('principal');
+// });
 
 // Route::get('/crear-cuenta', function () {
 //     return view('auth.register');
 // });
+
+// Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/', HomeController::class)->name('home');
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
