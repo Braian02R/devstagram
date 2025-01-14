@@ -1,18 +1,6 @@
 <div>
     <!-- People find pleasure in different ways. I find it in keeping my mind clear. - Marcus Aurelius -->
 
-    {{-- <h1>Mostrando Posts</h1> --}}
-
-    {{-- {{ $titulo }}
-
-    <h1>{{ $slot }}</h1> --}}
-
-    {{-- @forelse ( $posts as $post)
-        <h1>{{ $post->titulo}}</h1>
-    @empty
-        <p>No hay posts</p>
-    @endforelse --}}
-
     @if($posts->count())
         <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             @foreach ($posts as $post)
