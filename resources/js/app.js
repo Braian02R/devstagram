@@ -1,5 +1,4 @@
 import { drop } from 'lodash';
-import './bootstrap';
 import Dropzone from "dropzone";
 
 Dropzone.autoDiscover = false;
