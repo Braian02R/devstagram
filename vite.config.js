@@ -9,7 +9,6 @@ export default defineConfig({
         }),
     ],
     server: {
-        https: true, // Esto asegurará que Vite sirva con HTTPS en desarrollo
         hmr: {
             host: 'localhost'
         },
