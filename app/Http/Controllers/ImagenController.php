@@ -26,7 +26,10 @@ class ImagenController extends Controller
         $imagenServidor->save($imagenPath);
 
         //return response()->json(['imagen'=> $imagen->extension()]);
-        return response()->json(['imagen'=> $nombreImagen]);
+        // return response()->json(['imagen'=> $nombreImagen]);
+
+        // Devolver la URL completa de la imagen, usando HTTPS
+        return response()->json(['imagen' => asset('uploads/' . $nombreImagen)]);
 
 
     }
